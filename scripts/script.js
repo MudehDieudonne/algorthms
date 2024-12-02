@@ -2,14 +2,14 @@
 // Initialization of Variables
 // an Array of denominations, result and initialise i=0
 // loop through tha Array containing the notes
-// divide each element by the amount 
+// divide each element by the amount
 // take the remender and keep looping till amount = 0
 // return result
 // print
 
 // funtion def
 function calculateBanknotesWhile (amount) {
- // initialisation of variables
+  // initialisation of variables
   const denominations = [10000, 5000, 2000, 1000, 500, 100]
   const result = {}
   let i = 0
@@ -21,13 +21,13 @@ function calculateBanknotesWhile (amount) {
     if (amount >= denom) {
       // logic
       const count = Math.floor(amount / denom) // divides
-      result[denom] = count 
+      result[denom] = count
       amount %= denom // get the remainder
     }
     i++ // keep looping
-}
+  }
 
-  return result;
+  return result
 }
 
 // function call
@@ -43,7 +43,7 @@ console.log(output)
 // return longest-word
 // end
 
-function findLongestWord(sentence) {
+function findLongestWord (sentence) {
   // Split the sentence into words using spaces as the delimiter
   const words = sentence.split(' ')
 
@@ -58,7 +58,7 @@ function findLongestWord(sentence) {
       longestWord = word
       maxLength = word.length
     }
-}
+  }
 
   return longestWord
 }
@@ -68,19 +68,20 @@ const sentence = 'The quick brown fox jumps over the lazy dog'
 const longestWord = findLongestWord(sentence)
 console.log(longestWord)
 
-// Start 
+// Start
 // Initialise e initialbalance and transacrtion = []
 // loop throught the array and return the sum of it content in a variable = x
 // final balance = initialbalance + x
 // return final balance
 // end
 
-function calcateBalance(initBalance, transactions){
+function calcateBalance (initBalance, transactions) {
   let finalBalance = 0
-  for(i = 0; i <transactions.length; i++){
-    finalBalance = finalBalance + transactions[i]
+  for (let i = 0; i < transactions.length; i++) {
+    finalBalance += transactions[i]
   }
-  return finalBalance = finalBalance + initBalance
+  finalBalance += initBalance
+  return finalBalance
 }
 
 // Example usage
